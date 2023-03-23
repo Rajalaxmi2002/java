@@ -1,0 +1,49 @@
+import java.util.*;
+class Area
+{
+void calculateArea(float x)
+{
+System.out.println("area of square=" +x*x+"sq.units");
+}
+void calculateArea(float x,float y)
+{
+System.out.println("area of rectangle="+x*y+"sq.units");
+}
+void calculateArea(double r)
+{
+double area=3.14*r*r;
+System.out.println("area of circle="+area+"sq.units");
+}
+public static void main(String[] args)
+{
+int s;
+float l,b;
+double r;
+Area obj=new Area();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter side of square=");
+s=sc.nextInt();
+System.out.println("enter length & breadth of a reactngle=");
+l=sc.nextFloat();
+b=sc.nextFloat();
+System.out.println("enter radious of circle=");
+r=sc.nextDouble();
+obj.calculateArea(s);
+obj.calculateArea(l,b);
+obj.calculateArea(r);
+}
+}
+
+
+
+output:
+enter side of square=
+4
+enter length & breadth of a reactngle=
+3
+4
+enter radious of circle=
+5
+area of square=16.0sq.units
+area of rectangle=12.0sq.units
+area of circle=78.5sq.units
