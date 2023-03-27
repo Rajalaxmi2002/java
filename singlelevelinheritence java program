@@ -1,0 +1,129 @@
+import java.util.*;
+class Employee
+{
+int empid;
+String name;
+double salary;
+String adress;
+Employee()
+{
+Scanner sc2=new Scanner(System.in);
+System.out.println("enter employee id:");
+empid=sc2.nextInt();
+System.out.println("enter empoyee name:");
+name=sc2.next();
+System.out.println("enter employee salary:");
+salary=sc2.nextDouble();
+System.out.println("enter employee adress:");
+adress=sc2.next();
+}
+}
+class Teacher extends Employee
+{
+String department;
+String subject;
+Teacher()
+{
+Scanner sc3=new Scanner(System.in);
+System.out.println("enter department:");
+department=sc3.next();
+System.out.println("enter subject");
+subject=sc3.next();
+}
+void display()
+{
+System.out.println("...........");
+System.out.println("id:"+empid);
+System.out.println("name:"+name);
+System.out.println("salary:"+salary);
+System.out.println("adress:"+adress);
+System.out.println("department:"+department);
+System.out.println("subject:"+subject);
+System.out.println("..........");
+}
+}
+class Multilevelinheritence
+{
+public static void main(String[]args)
+{
+int n;
+Scanner sc1=new Scanner(System.in);
+System.out.println("enter no.of employee");
+n=sc1.nextInt();
+Teacher t[]=new Teacher[n];
+for(int i=0;i<n;i++)
+{
+t[i]=new Teacher();
+}
+System.out.println("the details are...");
+for(int i=0; i<n;i++)
+{
+t[i].display();
+}
+}
+}
+
+output:
+enter no.of employee
+3
+enter employee id:
+101
+enter empoyee name:
+rajalaxmi
+enter employee salary:
+12000
+enter employee adress:
+odisha,berhampur
+enter department:
+mca
+enter subject
+java
+enter employee id:
+102
+enter empoyee name:
+sreenidhi
+enter employee salary:
+13000
+enter employee adress:
+kerla,trivendrum
+enter department:
+mba
+enter subject
+python
+enter employee id:
+1003
+enter empoyee name:
+adii
+enter employee salary:
+14000
+enter employee adress:
+kerla,kovalum
+enter department:
+btech
+enter subject
+c++
+the details are...
+...........
+id:101
+name:rajalaxmi
+salary:12000.0
+adress:odisha,berhampur
+department:mca
+subject:java
+..........
+...........
+id:102
+name:sreenidhi
+salary:13000.0
+adress:kerla,trivendrum
+department:mba
+subject:python
+..........
+...........
+id:1003
+name:adii
+salary:14000.0
+adress:kerla,kovalum
+department:btech
+subject:c++
+..........
