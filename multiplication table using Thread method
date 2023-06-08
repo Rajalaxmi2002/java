@@ -1,0 +1,23 @@
+import java.util.*;
+class child extends Thread
+{
+public void run()
+   {
+   int n,i;
+   Scanner sc=new Scanner(System.in);
+   System.out.println("Enter the number");
+   n=sc.nextInt();
+   for(i=1;i<=10;i++)
+   {
+   System.out.println(n+"*"+i+"="+n*i);
+   }
+   }
+}  
+   class program
+   {
+   public static void main(String[] args)
+    {
+       child c =new child();
+        c.start();
+     }
+   }
