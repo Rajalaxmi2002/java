@@ -1,0 +1,38 @@
+import java.util.*;
+
+class Sortstr {
+    public static void main(String[] args) {
+        int i, j;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number of word");
+        int num = sc.nextInt();
+        String word[] = new String[num];
+        sc.nextLine();
+        for (i = 0; i < num; i++) {
+            System.out.println("enter the word");
+            word[i] = sc.nextLine();
+        }
+        for (i = 0; i < num - 1; i++) {
+            for (j = i + 1; j < num; j++) {
+                if (word[i].compareTo(word[j]) > 0) {
+                    String temp = word[i];
+                    word[i] = word[j];
+                    word[j] = temp;
+                }
+            }
+        }
+        System.out.println("sort string using array" + Arrays.toString(word));
+        System.out.println(word);
+    }
+}
+
+output
+enter the number of word
+3
+enter the word
+ram
+enter the word
+sita
+enter the word
+laxmi
+sort string using array[laxmi, ram, sita]
